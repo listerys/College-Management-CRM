@@ -25,26 +25,6 @@ const Header = ({ onSelectTerm }) => {
     fetchYearOptions();
   }, []);
 
-  useEffect(() => {
-    const handleClickOutside = (event) => {
-      if (event.target.closest(".dropdown") === null) {
-        setIsOpen(false);
-      }
-    };
-
-    document.addEventListener("click", handleClickOutside);
-
-    return () => {
-      document.removeEventListener("click", handleClickOutside);
-    };
-  }, []);
-
-  const handleTermSelect = (option) => {
-    setSelectedTerm(option);
-    setIsOpen(false);
-    onSelectTerm(option);
-  };
-
   return (
     <div className="headerContainer">
       <div className="logoSection">
