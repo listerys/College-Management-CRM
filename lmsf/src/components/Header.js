@@ -4,7 +4,10 @@ import "./Header.css"; // Ensure the CSS path is correct
 
   return (
     <div className="headerContainer">
-            <div className="dropdownSection">
+      <div className="logoSection">
+        <img src="logo_placeholder.png" alt="Company Logo" className="logo" />
+      </div>
+      <div className="dropdownSection">
         <span className="selectTermText">Select Term:</span>
         <div className="dropdown" onClick={() => setIsOpen(!isOpen)}>
           <div className="selectedTerm">
